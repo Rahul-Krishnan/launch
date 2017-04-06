@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 import React, { Component } from 'react';
 import FormContainer from './FormContainer';
 import MealsList from '../components/MealsList';
@@ -7,12 +8,12 @@ class App extends Component {
     super(props);
     this.state = {
       meals: []
-    }
+    };
     this.trackConsumption = this.trackConsumption.bind(this);
   }
 
   trackConsumption(submission) {
-    this.setState({ meals: this.state.meals.concat(submission) })
+    this.setState({ meals: this.state.meals.concat(submission) });
   }
 
   render() {

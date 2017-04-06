@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 import React, { Component } from 'react';
 import Select from '../components/Select';
 import TextField from '../components/TextField';
@@ -10,7 +11,7 @@ class FormContainer extends Component {
       foodItemConsumed: '',
       mealOptions: ['breakfast', 'lunch', 'dinner', 'snack'],
       mealSelected: ''
-    }
+    };
     this.handleClearForm = this.handleClearForm.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleConsumedChange = this.handleConsumedChange.bind(this);
@@ -25,7 +26,7 @@ class FormContainer extends Component {
       errors: {},
       foodItemConsumed: '',
       mealSelected: ''
-    })
+    });
   }
 
   handleFormSubmit(event) {
@@ -44,38 +45,38 @@ class FormContainer extends Component {
   }
 
   handleConsumedChange(event) {
-    this.validateConsumedChange(event.target.value)
-    this.setState({ foodItemConsumed: event.target.value })
+    this.validateConsumedChange(event.target.value);
+    this.setState({ foodItemConsumed: event.target.value });
   }
 
   handleMealSelection(event) {
-    this.validateMealSelection(event.target.value)
-    this.setState({ mealSelected: event.target.value })
+    this.validateMealSelection(event.target.value);
+    this.setState({ mealSelected: event.target.value });
   }
 
   validateConsumedChange(consumed) {
     if (consumed === '' || consumed === ' ') {
-      let newError = { foodItemConsumed: 'Food item consumed may not be blank.' }
-      this.setState({ errors: Object.assign(this.state.errors, newError) })
-      return false
+      let newError = { foodItemConsumed: 'Food item consumed may not be blank.' };
+      this.setState({ errors: Object.assign(this.state.errors, newError) });
+      return false;
     } else {
-      let errorState = this.state.errors
-      delete errorState.foodItemConsumed
-      this.setState({ errors: errorState })
-      return true
+      let errorState = this.state.errors;
+      delete errorState.foodItemConsumed;
+      this.setState({ errors: errorState });
+      return true;
     }
   }
 
   validateMealSelection(selection) {
     if (selection === '') {
-      let newError = { mealSelected: 'You must select a meal.' }
-      this.setState({ errors: Object.assign(this.state.errors, newError) })
-      return false
+      let newError = { mealSelected: 'You must select a meal.' };
+      this.setState({ errors: Object.assign(this.state.errors, newError) });
+      return false;
     } else {
-      let errorState = this.state.errors
-      delete errorState.mealSelected
-      this.setState({ errors: errorState })
-      return true
+      let errorState = this.state.errors;
+      delete errorState.mealSelected;
+      this.setState({ errors: errorState });
+      return true;
     }
   }
 
@@ -114,4 +115,3 @@ class FormContainer extends Component {
 }
 
 export default FormContainer;
-
