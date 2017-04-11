@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import MessageComponent from './components/MessageComponent';
 
 ReactDOM.render(
-  <MessageComponent />,
+  <MessageComponent
+    message="Hello from main.js"/>,
   document.getElementById('app')
 );
