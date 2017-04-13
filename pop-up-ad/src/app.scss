@@ -1,1 +1,35 @@
 /* Your styling here */
+
+.top-right {
+  float: right;
+  text-align: right;
+  margin-right: 0rem;
+  color: #A51181;
+}
+
+.popup-frame {
+  background-color: #F22FC3;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 75%;
+  color: #F4D748;
+  border-radius: 1rem;
+  border-width: medium;
+  border-color: black;
+  padding: 1rem;
+  text-align: center;
+}
+
+input[type=email] {
+  display: inline-block;
+  width: 70%;
+}
+
+input[type=submit] {
+  display: inline-block;
+  float: right;
+  width: 25%;
+  background-color: #12BFBC;
+  color: #F22FC3;
+  font-size: 1 rem;
+}
