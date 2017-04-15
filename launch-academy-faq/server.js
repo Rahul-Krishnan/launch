@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 let express = require('express')
 let questions = require('./src/constants/data')
 let server = express()
