@@ -25,3 +25,13 @@ server.listen(port, '0.0.0.0', (error) => {
 
   console.info(`==> 🌎 Listening on port ${port}. Open http://0.0.0.0:${port}/ in your browser.`)
 })
+
+module: {
+   loaders: [
+     {
+       test: /\.jsx?$/,
+       loader: 'babel',
+       exclude: /node_modules/,
+     }
+   ]
+ }
