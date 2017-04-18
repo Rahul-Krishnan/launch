@@ -1,0 +1,53 @@
+/* YOUR STYLING HERE */
+.tweet-container {
+  margin: 0.1rem;
+  padding: 1rem;
+  background-color: white;
+  border-width: medium;
+  border-color: black;
+  border-style: groove;
+  height: auto;
+  width: 100%;
+  display: inline-block;
+}
+
+.profile-image {
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.username {
+  display: inline-block;
+}
+
+.screen-name {
+  display: inline-block;
+  margin-left: 1rem;
+  color: $grey;
+}
+
+.date {
+  display: inline-block;
+  margin-left: 1rem;
+  color: $grey;
+}
+
+.tweet-text {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 2rem;
+  color: $grey;
+}
+
+.liked {
+  color: $red;
+}
+
+.retweeted {
+  color: $green;
+}
