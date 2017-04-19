@@ -2,12 +2,12 @@
 import React, { Component } from 'react';
 
 let wait = (milliseconds) => {
-  let startTime = new Date().getTime()
-  var currentTime = startTime
+  let startTime = new Date().getTime();
+  var currentTime = startTime;
   while (currentTime < startTime + milliseconds) {
-    currentTime = new Date().getTime()
+    currentTime = new Date().getTime();
   }
-}
+};
 
 class Picture extends Component {
   constructor(props) {
@@ -28,9 +28,47 @@ class Picture extends Component {
     this.setState({ clean: false });
   }
 
+  componentWillMount() {
+    console.log("** componentWillMount **");
+    console.log("render() is about to be called, and the Picture component will appear...");
+    wait(1000);
+  }
+
+  componentDidMount() {
+    console.log("** componentDidMount **");
+    console.log("render() was just called.");
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log("** componentWillReceiveProps **");
+    wait(1000);
+    console.log(nextProps);
+  }
+
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log("** shouldComponentUpdate **");
+  // }
+
+  componentWillUpdate(nextProps, nextState) {
+    console.log("** componentWillUpdate **");
+    wait(1000);
+    console.log(nextProps, nextState);
+  }
+
+  componentDidUpdate(previousProps, previousState) {
+    console.log("** componentDidUpdate **");
+    console.log(previousProps, previousState);
+  }
+
+  componentWillUnmount() {
+    console.log("** componentWillUnmount **");
+    console.log("Say 'Goodbye' to the Picture component...");
+    wait(1000);
+  }
+
   render() {
     let cleanText = this.state.clean ? "clean" : "dirty";
-    let levelText = (this.props.straightenCount % 2 == 0) ? "level" : "crooked";
+    let levelText = (this.props.straightenCount % 2 === 0) ? "level" : "crooked";
 
     return(
       <div>
