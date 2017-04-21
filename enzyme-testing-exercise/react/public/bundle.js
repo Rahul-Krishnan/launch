@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
