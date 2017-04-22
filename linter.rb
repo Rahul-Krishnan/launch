@@ -1,8 +1,6 @@
-require 'pry'
-
 directories = ARGV
 directories.each do |directory|
-  search_term = directory + "/*.js"
+  search_term = directory + "/**/*.js"
   Dir.glob(search_term) do |doc|
     this_file = File.open(doc, "r")
     text = File.read(this_file)
@@ -12,12 +10,4 @@ directories.each do |directory|
       File.open(doc, "w") { |file| file.write new_text }
     end
   end
-end
-
-
-quit = false;
-while !quit
-  system "clear"
-  choice = "no"
-  quit = true
 end
