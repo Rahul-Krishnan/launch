@@ -1,4 +1,3 @@
-/* jshint esversion: 6 */
 var config = {
   entry: {
     path: __dirname+'/src/main.js',
@@ -17,6 +16,6 @@ var config = {
     ]
   },
   devtool: 'eval-source-map'
-}
+};
 
 module.exports = config;
