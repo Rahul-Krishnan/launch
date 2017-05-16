@@ -1,0 +1,7 @@
+---
+title: "Planning an App"
+type: "exercise"  # challenge, exercise, article, video
+description: "Write user stories and generate wireframes for a Web Application."
+tags: "user-stories, wireframes"
+ignore:
+- "planning-an-app.md"
