@@ -1,9 +1,5 @@
 require 'spec_helper'
 
-class Launcher
-  include PartyGoer
-end
-
 describe "The Party" do
   let!(:partygoer) { Launcher.new }
 

@@ -5,7 +5,7 @@ Do you hear that noise? The rumbling of fun in the distance, the carefree destru
 
 ## It's Party Time.
 
-In the associated `code.rb` file, we've defined a `module`, `PartyGoer`, that we're going to use to define the behavior of the people invited to the party! When each guest comes in, we're going to include this module in them, and pass its methods on!
+In the associated `code.rb` file, we've defined a `module`, `PartyGoer`, that we're going to use to define the behavior of the people invited to the party! When each guest comes in, we're going to include this module in them, and pass its methods on! There's no need to touch the  `launcher.rb` file because it `include`s the `PartyGoer` module. 
 
 
 Our parties have simple rules:
