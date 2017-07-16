@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "sees cars" do
-  scenario "see all the cars", pending: true do
+  scenario "see all the cars" do
     car = Car.create(name: "ferrari")
     another_car = Car.create(name: "audi")
 
