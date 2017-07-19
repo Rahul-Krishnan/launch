@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 feature "sees airplanes" do
-  scenario "see all the airplanes", pending: true do
+  scenario "see all the airplanes" do
     airplane = Airplane.create(name: "Air Force One")
-    another_airplane = Airplane.create(name: "Spirit of St. Louise")
+    another_airplane = Airplane.create(name: "Spirit of St. Louis")
 
     visit airplanes_path
     expect(page).to have_content(airplane.name)

@@ -1,3 +1,3 @@
-class Horse < ApplicationRecord
+class Airplane < ApplicationRecord
   validates :name, presence: true
 end
