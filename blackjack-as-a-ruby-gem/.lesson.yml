@@ -1,0 +1,7 @@
+---
+title: "Blackjack as a Ruby Gem"
+type: "challenge"
+description: "Share your implementation of Blackjack on RubyGems.org!"
+tags: "open-source rubygems"
+ignore:
+- "blackjack-as-a-ruby-gem.md"
